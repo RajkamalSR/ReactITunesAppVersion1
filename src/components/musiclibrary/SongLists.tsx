@@ -32,13 +32,13 @@ export default function SongListsComponent() {
 
     const fetchData = async (artistName: string) => {
         setLoading(true);
-        //dispatch(getSearchSongs());
-        try {
+        dispatch(getSearchSongs());
+        /*try {
             const { data: response } = await axios.get(baseURL + "?term=" + artistName);
             setSongLists(response.results);
         } catch (error) {
             console.error(error);
-        }
+        }*/
         setLoading(false);
     }
 

@@ -26,7 +26,7 @@ let baseURL: string = "https://itunes.apple.com/search?term=queen";
     }
 }*/
 
-export const getSearchSongs = (artistName: string) => (dispatch: Dispatch<any>) => {
+export const getSearchSongs = (artistName?: string) => (dispatch: Dispatch<any>) => {
     axios.get(baseURL)
         .then((response) => { //  sucessfully api fetch
             dispatch({
